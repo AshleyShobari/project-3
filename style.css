@@ -1,0 +1,153 @@
+/* Add your CSS here */
+
+/* Keep the page content centered and readable on wide screens */
+header,
+body > p {
+  max-width: 900px;
+  width: min(100%, 900px);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+body {
+  margin: 0;
+  padding: 20px 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background: #f7f7f7;
+}
+
+header {
+  padding-top: 20px;
+  background: linear-gradient(135deg, #ffb3d9 0%, #ffc0cb 100%);
+}
+
+header > div {
+  background: #ffb3d9;
+  padding: 30px 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+header h1 {
+  color: #ffffff;
+  margin: 15px 0;
+}
+
+header p {
+  color: #ffffff;
+}
+
+section {
+  padding: 20px 0;
+  max-width: 100%;
+  width: 100%;
+  overflow-x: auto;
+  display: flex;
+  gap: 16px;
+  scroll-behavior: smooth;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+section > div {
+  flex-shrink: 0;
+  width: 250px;
+  background: #ffe6f0; /* baby pink */
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+section > div h2 {
+  margin: 0 0 8px 0;
+  color: #d9558a;
+  font-size: 24px;
+}
+
+section > div h3 {
+  margin: 0 0 15px 0;
+  font-size: 18px;
+  color: #333;
+}
+
+section > div p {
+  margin: 0;
+  font-size: 14px;
+  color: #666;
+  line-height: 1.5;
+}
+
+/* Timeline image wrapper: enforce the same aspect ratio as the 1968 image (1037x720) */
+.card-img {
+  width: 100%;
+  aspect-ratio: 1037 / 720;
+  overflow: hidden;
+  border-radius: 4px;
+  margin-bottom: 12px;
+  background: #f0f0f0;
+}
+
+.card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Caption that sits behind the image and is revealed on hover/focus */
+.card-img {
+  position: relative;
+}
+
+.card-caption {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.95);
+  color: #333;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 220ms ease, transform 220ms ease;
+  pointer-events: none;
+}
+
+.card-img img {
+  transition: opacity 220ms ease, transform 220ms ease;
+}
+
+.card-img:hover img,
+.card-img:focus-within img {
+  opacity: 0.04;
+  transform: scale(1.02);
+}
+
+.card-img:hover .card-caption,
+.card-img:focus-within .card-caption {
+  opacity: 1;
+  transform: none;
+  pointer-events: auto;
+}
+
+.card-caption p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+}
+header img {
+  display: block;
+  width: 200px;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto 20px auto;
+}
+
+body > p {
+  padding-bottom: 20px;
+}
+
